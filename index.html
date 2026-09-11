@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Pangoa Reserve® | Cafetería & Especialidad</title>
+        <link rel="stylesheet" href="CSS/fontello.css">
+        <link rel="stylesheet" href="CSS/estilos.css"> 
+    </head>
+
+<script>
+  function iniciarCarrusel() {
+    const carruseles = document.querySelectorAll('.carrusel-img');
+    
+    carruseles.forEach(carrusel => {
+      const imagenes = carrusel.querySelectorAll('img');
+      if (imagenes.length < 2) return;
+      
+      let indiceActual = 0;
+      
+      setInterval(() => {
+        imagenes[indiceActual].classList.remove('active');
+        indiceActual = (indiceActual + 1) % imagenes.length;
+        imagenes[indiceActual].classList.add('active');
+      }, 5000);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', iniciarCarrusel);
+</script>
+
+    <body>
+        <header> 
+            <div class="contenedor">
+                <h1 class="logo"><i class="icon-coffee"></i> Pangoa Reserve
+                </h1>
+                 <input type="checkbox" id="menu-bar"> 
+                 <label class ="icon-menu" for="menu-bar"></label>
+                 <nav class="menu">
+                    <a href="">Inicio</a>
+                    <a href="">Nosotros</a>
+                    <a href="">Especialidades</a>
+                    <a href="">Experiencia</a>
+                    <a href="">Contacto</a>
+                 </nav>
+            </div>
+        </header>
+        <main>
+            <section id="banner">
+                <img src="img/banner.jpg">
+                <div class="contenedor">
+                    <h2>El Sabor de Nuestra Tierra</h2>
+                    <p>Café de especialidad, cacao fino de aroma y coctelería de autor directa de la Selva Central.</p>
+                    <a href="Productos" class="btn">Ver Carta</a>
+                </div>
+            </section>
+            <section id="historia">
+                <div class="contenedor">
+                    <div class="texto-historia">
+                        <h3>Tradición y Origen desde 1964</h3>
+                        <p>Nuestra historia nace del esfuerzo de los agricultores de la CAC Pangoa. Pangoa Reserve representa la máxima expresión de granos seleccionados, uniendo el legado cooperativo con una experiencia gastronómica de categoría internacional.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="productos">
+            <div class="contenedor">
+                <h3>Nuestras Especialidades</h3>
+                <div class="grilla-productos">
+                    
+                    <article class="card">
+                        <img src="IMG/imagen1.jpg" alt="Línea Pangoa Reserve">
+                        <div class="info-card">
+                            <h4>Línea Premium Pangoa</h4>
+                            <p>Ediciones limitadas de café y cacao tostado de alta puntuación en taza.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="IMG/imagen2.jpg" alt="Licores Artesanales">
+                        <div class="info-card">
+                            <h4>Licores de Café & Cacao</h4>
+                            <p>Destilados y macerados con el sello distintivo de nuestra tradición.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="IMG/imagen3.jpg" alt="Chocolates de Origen">
+                        <div class="info-card">
+                            <h4>Chocolatería Fina</h4>
+                            <p>Tablillas y bombones elaborados con cacao nativo de alta pureza.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+            <section id="experiencia">
+            <div class="contenedor">
+                <h3>Servicio y Carta del Local</h3>
+                <div class="grilla-experiencia">
+                    <div class="item-exp">
+                <div class="carrusel-img">
+                    <img src="IMG/imagen4.jpg" class="active">
+                    <img src="IMG/imagen4_2.jpg">
+                    <img src="IMG/imagen4_3.jpg">
+                </div>
+                <h4>Bebidas Frías</h4>
+            </div>
+
+            <div class="item-exp">
+                <div class="carrusel-img">
+                    <img src="IMG/imagen5.jpg" alt="Coctelería" class="coctel-zoom active">
+                    <img src="IMG/imagen5_2.jpg" alt="Coctelería" class="coctel-zoom">
+                    <img src="IMG/imagen5_3.jpg" alt="Coctelería" class="coctel-zoom">
+                </div>
+                <h4>Coctelería</h4>
+            </div>
+
+            <div class="item-exp">
+                <div class="carrusel-img">
+                    <img src="IMG/imagen6.jpg" class="active">
+                    <img src="IMG/imagen6_2.jpg">
+                    <img src="IMG/imagen6_3.jpg">
+                </div>
+                <h4>Arte Latte</h4>
+            </div>
+
+            <div class="item-exp">
+                <div class="carrusel-img">
+                    <img src="IMG/imagen7.jpg" class="active">
+                    <img src="IMG/imagen7_2.jpg">
+                    <img src="IMG/imagen7_3.jpg">
+                </div>
+                <h4>Mix Reserve</h4>
+            </div>
+
+        </section>
+        </main>    
+            <footer>
+                    <div class="contenedor">
+                        <p class="copy">Pangoa Reserve® Cafetería 2026 | ©Todos los derechos reservados.</p>
+                    <div class="sociales">
+                        <a href="https://www.facebook.com/p/Pangoa-Reserve-Cafeter%C3%ADa-100085414183384/" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/cafeteriapangoareserve/" target="_blank">Instagram</a>
+                    </div>
+                    </div>
+            </footer>
+    </body> 
+</html>
